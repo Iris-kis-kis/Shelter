@@ -1,0 +1,10 @@
+@media screen and (max-width:768px) {
+    .navgation-header {
+        display: none;
+    }
+
+    .nav-wrapper-mobile {
+        display: block;
+    }
+    
+}
