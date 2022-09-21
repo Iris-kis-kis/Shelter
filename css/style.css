@@ -105,6 +105,9 @@ img {
     color: #fafafa;
 }
 
+.navigation-header__link:hover {
+    color: #fafafa;
+}
 
 .burger-menu {
     width: 30px;
