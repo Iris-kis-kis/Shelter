@@ -20,7 +20,7 @@
         </a>
 
         <div class="nav-wrapper">
-          <nav class="navgation-header">
+          <nav class="navigation-header">
             <ul class="navigation-header__list">
               <li class="navigation-header__item">
                 <a class="navigation-header__link" href="#">About the shelter</a>
@@ -45,14 +45,46 @@
             <div class="burger-menu__item"></div>
           </div>
         </div>
-
       </header>
+
+      <nav class="navigation-mobile">
+        <div class="navigation-mobile-header">
+          <a class="logo" href="./index.html">
+            <img src="./images/logo.svg" alt="logo">
+          </a>
+          <div class="burger-menu">
+            <div class="burger-menu__item"></div>
+            <div class="burger-menu__item"></div>
+            <div class="burger-menu__item"></div>
+          </div>
+        </div>
+        <ul class="navigation-mobile__list">
+          <li class="navigation-mobile__item">
+            <a class="navigation-mobile__link" href="#">About the shelter</a>
+          </li>
+          <li class="navigation-mobile__item">
+            <a class="navigation-mobile__link" href="#">Our pets</a>
+          </li>
+          <li class="navigation-mobile__item">
+            <a class="navigation-mobile__link" href="#">Help the shelter</a>
+          </li>
+          <li class="navigation-mobile__item">
+            <a class="navigation-mobile__link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-
   </div>
-
-
 </body>
+
+<script>
+  const burgerMenu = document.querySelector('.burger-menu');
+  if (burgerMenu) {
+    const navigationMobile = document.querySelector('.navigation-mobile');
+    burgerMenu.addEventListener("click", function (e) {
+      navigationMobile.classList.toggle('_active');
+    });
+  }
+</script>
 
 </html>

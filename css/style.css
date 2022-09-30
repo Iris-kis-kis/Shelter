@@ -1,128 +1,193 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 
-    font-family: 'Georgia';
-    font-style: normal;
+  font-family: 'Georgia';
+  font-style: normal;
 }
 
 h1,
 h2,
 h3 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 
 .wrapper {
-    height: 100%;
-    width: 100%;
-    position: relative;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .header-wrapper {
-    width: 100%;
-    background: url('../images/grey_background.png');
-    background-size: cover;
+  width: 100%;
+  background: url('../images/grey_background.png');
+  background-size: cover;
 
 }
 
 .header {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
 }
 
 .logo {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .logo__title {
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 110%;
-    color: #F1CDB3;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  color: #F1CDB3;
 }
 
 .logo__subtitle {
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    letter-spacing: 0.1em;
-    color: #FFFFFF;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
 }
 
 .navigation-header__list {
-    display: flex;
-    padding: 0;
+  display: flex;
 }
 
 .navigation-header__item {
-    margin-right: 35px;
+  margin-right: 35px;
 
 }
 
 .navigation-header__item:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .navigation-header__link {
-    text-decoration: none;
-    font-family: 'Arial';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-    color: #CDCDCD;
-    transition: all 0.2s;
+  text-decoration: none;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+  transition: all 0.2s;
 }
 
 .navigation-header__link:active {
-    border-bottom: #F1CDB3 3px solid;
-    color: #fafafa;
+  border-bottom: #F1CDB3 3px solid;
+  color: #fafafa;
 }
 
 .navigation-header__link:hover {
-    color: #fafafa;
+  color: #fafafa;
 }
 
 .burger-menu {
-    width: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 
 .burger-menu__item {
-    height: 2px;
-    margin-bottom: 10px;
-    background-color: #F1CDB3;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: #F1CDB3;
 }
 
-.burger-menu:hover {
-    transform: rotate(90deg);
+.burger-menu__item:last-child {
+  margin-bottom: 0;
 }
 
 .nav-wrapper-mobile {
-    display: none;
+  display: none;
+}
+
+.navigation-mobile {
+  position: absolute;
+  width: 320px;
+  top: 0;
+  right: -320px;
+  transition: all .6s ease-in-out;
+  background-color: #292929;
+  display: none;
+}
+
+.navigation-mobile._active {
+  right: 0;
+}
+
+.navigation-mobile__list {
+  flex-direction: column;
+  align-items: center;
+
+  display: flex;
+}
+
+.navigation-mobile__item {
+  margin-bottom: 43px;
+}
+
+.navigation-mobile__item:last-child {
+  margin-bottom: 0;
+}
+
+.navigation-mobile__link {
+  text-decoration: none;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  color: #CDCDCD;
+  transition: all 0.2s;
+}
+
+.navigation-mobile__link:active {
+  border-bottom: #F1CDB3 3px solid;
+  color: #fafafa;
+}
+
+.navigation-mobile__link:hover {
+  color: #fafafa;
+}
+
+.navigation-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 53px;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 153px;
+}
+
+.navigation-mobile-header .burger-menu {
+  transform: rotate(90deg);
 }
