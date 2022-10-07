@@ -1,10 +1,84 @@
-@media screen and (max-width:768px) {
-    .navgation-header {
-        display: none;
-    }
+@media (max-width: 1400px) {}
 
-    .nav-wrapper-mobile {
-        display: block;
-    }
-    
+@media (max-width: 1200px) {
+  .header {
+    margin: 0 30px;
+    padding-top: 30px;
+  }
+
+  .startscreen {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .puppy-img {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-left: 10px;
+    margin-right: 53px;
+  }
+
+
+  .navigation-header {
+    display: none;
+  }
+
+  .nav-wrapper-mobile {
+    display: block;
+  }
+
+  .startscreen {
+    flex-direction: column;
+  }
+
+  .startscreen-img {
+    max-width: 569px;
+    align-self: flex-end;
+  }
+
+
+
+  .startscreen__link {
+    margin: 0 auto;
+    margin-bottom: 115px;
+  }
+
+
+
+
+
+
+
+}
+
+@media (max-width: 576px) {
+  .startscreen {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .startscreen-content {
+    align-items: center;
+  }
+
+  .startscreen__title {
+    font-size: 25px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+
+  .startscreen__text {
+    align-items: center;
+    text-align: center;
+  }
+
+
 }
