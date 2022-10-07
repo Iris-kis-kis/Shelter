@@ -13,7 +13,8 @@
 
 <body>
   <div class="wrapper">
-    <div class="header-wrapper">
+    <div class="header-wrapper-startscreen">
+
       <header class="header">
         <a class="logo" href="./index.html">
           <img src="./images/logo.svg" alt="logo">
@@ -73,18 +74,41 @@
           </li>
         </ul>
       </nav>
+
+      <section class="startscreen">
+        <div class="startscreen-content">
+          <h1 class="startscreen__title">Not only people need a house</h1>
+          <p class="startscreen__text">We offer to give a chance to a little and nice puppy
+            with an extremely wide and open heart. He or she will love
+            you more than anybody else in the world, you will see!
+          </p>
+          <a class="startscreen__link" href="#">
+            <span class="startscreen-button">Make a friend</span>
+          </a>
+        </div>
+        <div class="startscreen-img">
+          <img class="puppy-img" src="./images/puppy_startscreen_desk.png" alt="puppy">
+        </div>
+      </section>
+
     </div>
+
+
   </div>
 </body>
 
 <script>
-  const burgerMenu = document.querySelector('.burger-menu');
-  if (burgerMenu) {
-    const navigationMobile = document.querySelector('.navigation-mobile');
-    burgerMenu.addEventListener("click", function (e) {
+  const burgerMenu = document.querySelectorAll('.burger-menu');
+  const logo = document.querySelector('.logo');
+  const navigationMobile = document.querySelector('.navigation-mobile');
+
+  burgerMenu.forEach(function (element) {
+    element.addEventListener("click", function (e) {
       navigationMobile.classList.toggle('_active');
+      logo.classList.toggle('_active');
     });
-  }
+  });
+
 </script>
 
 </html>

@@ -36,9 +36,10 @@ img {
   height: 100%;
   width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
-.header-wrapper {
+.header-wrapper-startscreen {
   width: 100%;
   background: url('../images/grey_background.png');
   background-size: cover;
@@ -58,7 +59,11 @@ img {
 
 .logo {
   text-decoration: none;
+  visibility: visible;
+  opacity: 1;
+  transition: all .6s ease-in-out;
 }
+
 
 .logo__title {
   font-weight: 400;
@@ -136,18 +141,26 @@ img {
   right: -320px;
   transition: all .6s ease-in-out;
   background-color: #292929;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  height: 100vh;
 }
 
 .navigation-mobile._active {
   right: 0;
+  visibility: visible;
+  opacity: 1;
 }
 
 .navigation-mobile__list {
   flex-direction: column;
   align-items: center;
-
+  width: 100%;
   display: flex;
+  position: absolute;
+  top: calc(50% + 30px);
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 30px));
 }
 
 .navigation-mobile__item {
@@ -185,9 +198,80 @@ img {
   margin-right: 53px;
   margin-left: 10px;
   margin-top: 30px;
-  margin-bottom: 153px;
 }
 
 .navigation-mobile-header .burger-menu {
   transform: rotate(90deg);
+}
+
+.logo._active {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .6s ease-in-out;
+}
+
+
+.startscreen {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.startscreen-content {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.startscreen__title {
+  max-width: 310px;
+  margin-bottom: 42px;
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+
+.startscreen__text {
+  margin-bottom: 42px;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #CDCDCD;
+}
+
+.startscreen__link {
+  text-decoration: none;
+}
+
+.startscreen-button {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  padding: 15px 45px;
+  background: #F1CDB3;
+  border-radius: 100px
+}
+
+.startscreen-button:hover {
+  background: #FDDCC4;
+}
+
+.puppy-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
