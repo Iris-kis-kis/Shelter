@@ -11,7 +11,11 @@
   }
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+  .puppy-img {
+    min-width: 400px;
+  }
+}
 
 @media (max-width: 768px) {
   .header {
@@ -30,13 +34,11 @@
 
   .startscreen {
     flex-direction: column;
-    max-width: 569px;
-    margin: 0 auto;
   }
 
   .startscreen-img {
-    position: relative;
-    left: 70px;
+    max-width: 569px;
+    align-self: flex-end;
   }
 
 
@@ -60,6 +62,10 @@
     margin-right: 10px;
   }
 
+  .startscreen-content {
+    align-items: center;
+  }
+
   .startscreen__title {
     font-size: 25px;
     line-height: 130%;
@@ -74,8 +80,5 @@
     text-align: center;
   }
 
-  .startscreen-img {
-    left: 0;
-    margin-left: 40px;
-  }
+
 }
